@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Items</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="input__items">
+        <div class="container">
+            <div class="input__items__wrapper">
+                <div class="items__image">
+                    <div class="items__image__big">
+                        <img src="./default-thumbnail.jpg" alt="">
+                        <label for="input__image__big"></label>
+                        <input type="file" id="input__image__big">
+                    </div>
+                    <div class="items__image__small">
+                        <div class="items__image__small__1">
+                            <img src="./default-thumbnail.jpg" alt="">
+                            <label for="input__image__small__1"></label>
+                            <input type="file" id="input__image__small__1">
+                        </div>
+                        <div class="items__image__small__2">
+                            <img src="./default-thumbnail.jpg" alt="">
+                            <label for="input__image__small__2"></label>
+                            <input type="file" id="input__image__small__2">
+                        </div>
+                        <div class="items__image__small__3">
+                            <img src="./default-thumbnail.jpg" alt="">
+                            <label for="input__image__small__3"></label>
+                            <input type="file" id="input__image__small__3">
+                        </div>
+                        <div class="items__image__small__4">
+                            <img src="./default-thumbnail.jpg" alt="">
+                            <label for="input__image__small__4"></label>
+                            <input type="file" id="input__image__small__4">
+                        </div>
+                        <div class="items__image__small__5">
+                            <img src="./default-thumbnail.jpg" alt="">
+                            <label for="input__image__small__5"></label>
+                            <input type="file" id="input__image__small__5">
+                        </div>
+                    </div>
+                </div>
+                <div class="items__input__data">
+                    <a href="/content">Content</a>
+                    <h1>Form Input Item</h1>
+                    <form action="/" method="post">
+                        <div class="items__code__name__description">
+                            <div class="items__code">
+                                <label for="item__code">Id Item</label>
+                                <input type="text" name="idItem" id="item__code">
+                            </div>
+                            <div class="items__code">
+                                <label for="item__name">Name Item</label>
+                                <input type="text" name="itemName" id="item__name">
+                            </div>
+                            <div class="items__code">
+                                <label for="item__description">Description Item</label>
+                                <input type="text" name="desItem" id="item__description">
+                            </div>
+                            <div class="items__code">
+                                <label for="item__author">Author</label>
+                                <input type="text" name="authorItem" id="item__author">
+                            </div>
+                            <div class="items__code">
+                                <label for="item__UnitPrice">Unit Price Item</label>
+                                <input type="text" name="unitPriceItem" id="item__UnitPrice">
+                            </div>
+                            <div class="items__code">
+                                <label for="item__Unit">Unit Item</label>
+                                <input type="text" name="unitItem" id="item__Unit">
+                            </div>
+                            <div class="items__code">
+                                <label for="item__Price">Price Item</label>
+                                <input type="text" name="priceItem" id="item__Price">
+                            </div>
+                        </div>
+                        <!-- 
+                        <div class="items__UnitPrice__Unit__Price">
+           
+                        </div> -->
+                        <!-- <div class="items__flavor">
+                            <label for="item__flavor">Flavor</label>
+                            <input type="text" id="item__flavor">
+                        </div>
+                        <div class="items__size">
+                            <label for="item__size">Size</label>
+                            <input type="text" id="item__size">
+                        </div> -->
+                        <div class="button">
+                            <button type="submit" name="list" class="save">Save Done</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const input__image__big = document.getElementById("input__image__big");
+        const image__big = document.querySelector(".items__image__big img");
+        const input__image__small__1 = document.getElementById("input__image__small__1");
+        const image__small__1 = document.querySelector(".items__image__small__1 img");
+        const input__image__small__2 = document.getElementById("input__image__small__2");
+        const image__small__2 = document.querySelector(".items__image__small__2 img");
+        const input__image__small__3 = document.getElementById("input__image__small__3");
+        const image__small__3 = document.querySelector(".items__image__small__3 img");
+        const input__image__small__4 = document.getElementById("input__image__small__4");
+        const image__small__4 = document.querySelector(".items__image__small__4 img");
+        const input__image__small__5 = document.getElementById("input__image__small__5");
+        const image__small__5 = document.querySelector(".items__image__small__5 img");
+        const button__save = document.querySelector(".save");
+
+
+        input__image__big.addEventListener("change", () => {
+            image__big.src = URL.createObjectURL(input__image__big.files[0]);
+        });
+
+        input__image__small__1.addEventListener("change", () => {
+            image__small__1.src = URL.createObjectURL(input__image__small__1.files[0]);
+        });
+        input__image__small__2.addEventListener("change", () => {
+            image__small__2.src = URL.createObjectURL(input__image__small__2.files[0]);
+        });
+        input__image__small__3.addEventListener("change", () => {
+            image__small__3.src = URL.createObjectURL(input__image__small__3.files[0]);
+        });
+        input__image__small__4.addEventListener("change", () => {
+            image__small__4.src = URL.createObjectURL(input__image__small__4.files[0]);
+        });
+        input__image__small__5.addEventListener("change", () => {
+            image__small__5.src = URL.createObjectURL(input__image__small__5.files[0]);
+        });
+
+        button__save.addEventListener("click", () => {
+            localStorage.setItem("image__big", image__big.src);
+        });
+    </script>
+</body>
+
+</html>

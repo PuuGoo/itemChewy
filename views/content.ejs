@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content</title>
+</head>
+
+<body>
+    <div id="id"></div>
+    <div id="name"></div>
+    <div id="description"></div>
+    <div id="author"></div>
+    <div id="unitPrice"></div>
+    <div id="unit"></div>
+    <div id="price"></div>
+
+</body>
+<script>
+    var id = JSON.parse('<%-JSON.stringify(name[name.length - 1].idItem)%>'),
+    name = JSON.parse('<%-JSON.stringify(name[name.length - 1].name)%>'),
+    description = JSON.parse('<%-JSON.stringify(name[name.length - 1].description)%>'),
+    author = JSON.parse('<%-JSON.stringify(name[name.length - 1].author)%>'),
+    unitPrice = JSON.parse('<%-JSON.stringify(name[name.length - 1].unitPrice)%>'),
+    unit = JSON.parse('<%-JSON.stringify(name[name.length - 1].unit)%>'),
+    price = JSON.parse('<%-JSON.stringify(name[name.length - 1].price)%>')
+    document.getElementById("id").innerText = id;
+    document.getElementById("name").innerText = name;
+    document.getElementById("description").innerText = description;
+    document.getElementById("author").innerText = author;
+    document.getElementById("unitPrice").innerText = unitPrice;
+    document.getElementById("unit").innerText = unit;
+    document.getElementById("price").innerText = price;
+</script>
+
+</html>
